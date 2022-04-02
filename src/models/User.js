@@ -12,6 +12,8 @@ const User = sequelize.define('users', {
   password:{
       type: Sequelize.STRING
   }   
+}, {
+    timestamps: false,
 });
 
 module.exports = User

@@ -15,4 +15,4 @@ var sequelize = new Sequelize(
     },
 });
 
-MODULE.exports = sequelize
+module.exports = sequelize

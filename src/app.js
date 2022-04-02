@@ -4,7 +4,7 @@ const morgan = require('morgan')
 require("dotenv").config();
 
 const app = express()
-
+const UserRoutes = require('./routes/user')
 app.use(express.urlencoded({
     extended: true
 }))
@@ -16,4 +16,8 @@ app.use(session({
   }));
 
 app.use(morgan("dev"))
+
+
+app.use('/api/user', UserRoutes)
+
 module.exports = app;
