@@ -19,9 +19,6 @@ const User = sequelize.define('users', {
       type: Sequelize.STRING,
       allowNull: false,
       validate:{
-          isAlpha:{
-              msg: 'El nombre solo debe contener letras'
-          },
           len:{
               args: [4,255],
               msg: 'El nombre debe contener al menos 4 letras'
