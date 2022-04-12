@@ -32,6 +32,10 @@ const User = sequelize.define('users', {
           args: [6,255],
           msg: 'La contraseña debe tener al menos 6 caracteres'
       }
+  }, 
+  status:{
+        type: Sequelize.STRING,
+        defaultValue: 'UNVERIFIED'
   }   
 }, {
     timestamps: false,
